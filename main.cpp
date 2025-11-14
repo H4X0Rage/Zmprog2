@@ -44,18 +44,21 @@ class Kreator{
     Kreator(char typ){
         switch(typ){
 case 'd':
-    printf("wybrano operacje dodawanie\n");
+    printf("Wybrano operacje Dodawanie\n");
     this->kalkulator = new Dodawanie(); 
     break;
    
 case 'o':
+    printf("Wybrano operacje Odejmowanie\n");
     this->kalkulator = new Odejmowanie(); 
     break;
    
 case 'm':
+    printf("Wybrano operacje Mnozenie\n");
     this->kalkulator = new Mnozenie(); 
     break;
 case 'i':
+    printf("Wybrano operacje Iloraz\n");
     this->kalkulator = new Iloraz(); 
     break;
 default:
@@ -77,7 +80,7 @@ int main(){
     long b=2;
     
 
-    Kreator* operacja=new Kreator('y');
+    Kreator* operacja=new Kreator('d');
     Kalkulator* operacjaDod = operacja->getKalkulator();
     cout<<"Wynik dodawania a+b="<<operacjaDod->dzialanie(a,b)<<endl;
     delete operacja;
